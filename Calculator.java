@@ -13,8 +13,8 @@ public class Calculator extends Thread{
   }
 
   public void run(){
-    array=new int[width/4][height/4];
-
+    array=new int[width/2][height/4];
+    
   }
 
   public int[][] getSector(){
