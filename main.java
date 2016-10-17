@@ -20,6 +20,7 @@ public class main extends Canvas{
   public void paint(Graphics g){
     Scanner scan=new Scanner(System.in);
     //int beta=scan.nextInt();
+    int beta=0;
     Calculator[] pieces=new Calculator[4];
     for(int i=0;i<4;i++){
       pieces[i]=new Calculator(i,Width,Height,beta);
