@@ -34,8 +34,8 @@ public class Calculator extends Thread{
     int w=0;
     for(int x=offsetX;x<offsetX+(width/2);x++){
       for(int y=offsetY;y<offsetY+(height/2);y++){
-        double xi=((double)x-(double)width/2.0)/((double)width/2.0);
-        double yi=((double)y-(double)height/2.0)/((double)width/2.0);
+        double xi=((double)x-(double)width/2.0)/((double)width/4.0);
+        double yi=((double)y-(double)height/2.0)/((double)width/4.0);
 
         //Setting up complex numbers
         Complex z=new Complex(0,0);
