@@ -13,6 +13,8 @@ public class main extends Canvas{
 		frame.setSize(Width, Height);
     main index = new main();
     frame.add(index);
+    frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+    frame.setUndecorated(true);
 		frame.setDefaultCloseOperation(3);
 		frame.setVisible(true);
   }
