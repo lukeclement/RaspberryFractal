@@ -2,7 +2,7 @@ import java.util.*;
 import java.lang.*;
 import java.awt.*;
 import javax.swing.JFrame;
-import com.sun.prism.paint.Paint;
+//import com.sun.prism.paint.Paint;
 
 public class main extends Canvas{
   public static final int Height=1024;
