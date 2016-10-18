@@ -32,7 +32,7 @@ public class Calculator extends Thread{
       break;
     }
     //finding madelbrots
-    double q=1;
+    double q=0.5;
     for(int x=offsetX;x<offsetX+(width/2);x++){
       for(int y=offsetY;y<offsetY+(height/2);y++){
         double xii=(double)x;
@@ -44,20 +44,20 @@ public class Calculator extends Thread{
         double xi=q*((xii/xxii)-2);
         double yi=((double)y-(double)height/2.0)/((double)width/q);
         switch(secondary){
-          case 0: xi=q*((xii/xxii)-2);
+          case 0: xi=q*((xii/xxii)-3);
           break;
-          case 1: xi=q*((xii/xxii)-1);
+          case 1: xi=q*((xii/xxii)-2);
           break;
-          case 2: xi=q*((xii/xxii)+0);
+          case 2: xi=q*((xii/xxii)-1);
           break;
-          case 3: xi=q*((xii/xxii)+1);
+          case 3: xi=q*((xii/xxii)+0);
           break;
 
         }
         switch(secondaryTwo){
           case 0: yi=((double)y-0)/((double)width/q);
           break;
-          case 1: yi=((double)y-(double)height/2.0)/((double)width/q);
+          case 1: yi=((double)y-(double)height)/((double)width/q);
           break;
         }
 
