@@ -64,10 +64,18 @@ public class Calculator extends Thread{
         //Setting up complex numbers
         Complex z=new Complex(0,0);
         Complex c=new Complex(xi,yi);
+        Complex op=new Complex(1,1);
         int iteration=0;
-        for(int i=0;i<255&&(z.getReal()<=2.0E+307||z.getImaginary()<=2.0E+307);i++){
-					z=(z.square()).plus(c);
-					++iteration;
+        for(int i=0;i<255*255*255&&(z.getReal()<=2.0E+307||z.getImaginary()<=2.0E+307);i++){
+          if(op.getReal()==z.getReal()&&op.getImaginary()==z.getImaginary()){
+            iteration=255*255*255-2;
+          }
+          op.setReal(z.getReal());
+          op.setImaginary(z.getImaginary());
+          z=(z.square()).plus(c);
+
+          ++iteration;
+
 				}
         array[x-offsetX][y-offsetY]=iteration;
       }

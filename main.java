@@ -52,7 +52,17 @@ public class main extends Canvas{
         }
         for(int i=offsetX;i<offsetX+Width/2;i++){
           for(int j=offsetY;j<offsetY+Height/2;j++){
-            g.setColor(new Color(0,0,a[i-offsetX][j-offsetY]));
+            int it=a[i-offsetX][j-offsetY];
+            for(int p=0;p<255;p++){
+              for(int o=0;o<255;o++){
+                for(int l=0;l<255;l++){
+                  if(p*255*255+p*255+l==it){
+                    g.setColor(new Color(q,p,l));
+                  }
+                }
+              }
+            }
+            //g.setColor(new Color(0,0,a[i-offsetX][j-offsetY]));
             g.drawLine(i,j,i,j);
           }
         }
