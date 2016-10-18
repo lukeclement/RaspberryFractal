@@ -3,15 +3,17 @@ import java.lang.*;
 public class Calculator extends Thread{
   private int id=0;
   private int secondary=0;
+  private int secondaryTwo=0;
   private int width;
   private int height;
   private int[][] array;
 
-  public Calculator(int id, int width, int height, int s){
+  public Calculator(int id, int width, int height, int s, int st){
     this.id=id;
     this.width=width;
     this.height=height;
     secondary=s;
+    secondaryTwo=st;
   }
 
   public void run(){
@@ -30,12 +32,34 @@ public class Calculator extends Thread{
       break;
     }
     //finding madelbrots
-    int q=0;
-    int w=0;
+    double q=1;
     for(int x=offsetX;x<offsetX+(width/2);x++){
       for(int y=offsetY;y<offsetY+(height/2);y++){
-        double xi=((double)x-(double)width/2.0)/((double)width/4.0);
-        double yi=((double)y-(double)height/2.0)/((double)width/4.0);
+        double xii=(double)x;
+        double yii=(double)y;
+        double xxii=(double)width;
+        double yyii=(double)height;
+
+
+        double xi=q*((xii/xxii)-2);
+        double yi=((double)y-(double)height/2.0)/((double)width/q);
+        switch(secondary){
+          case 0: xi=q*((xii/xxii)-2);
+          break;
+          case 1: xi=q*((xii/xxii)-1);
+          break;
+          case 2: xi=q*((xii/xxii)+0);
+          break;
+          case 3: xi=q*((xii/xxii)+1);
+          break;
+
+        }
+        switch(secondaryTwo){
+          case 0: yi=((double)y-0)/((double)width/q);
+          break;
+          case 1: yi=((double)y-(double)height/2.0)/((double)width/q);
+          break;
+        }
 
         //Setting up complex numbers
         Complex z=new Complex(0,0);

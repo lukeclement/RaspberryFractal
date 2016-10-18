@@ -7,14 +7,19 @@ import javax.swing.JFrame;
 public class main extends Canvas{
   public static final int Height=1024;
   public static final int Width=1280;
+  public static int xid;
+  public static int yid;
 
   public static void main(String[] args){
     JFrame frame = new JFrame();
 		frame.setSize(Width, Height);
     main index = new main();
+    xid=Integer.parseInt(args[0]);
+    yid=Integer.parseInt(args[1]);
     frame.add(index);
-    frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-    frame.setUndecorated(true);
+    //frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+    //frame.setUndecorated(true);
+    frame.setTitle(args[0]+","+args[1]);
 		frame.setDefaultCloseOperation(3);
 		frame.setVisible(true);
   }
@@ -22,10 +27,12 @@ public class main extends Canvas{
   public void paint(Graphics g){
     Scanner scan=new Scanner(System.in);
     //int beta=scan.nextInt();
-    int beta=0;
+    System.out.println(xid);
+    int x=xid;
+    int y=yid;
     Calculator[] pieces=new Calculator[4];
     for(int i=0;i<4;i++){
-      pieces[i]=new Calculator(i,Width,Height,beta);
+      pieces[i]=new Calculator(i,Width,Height,x,y);
       pieces[i].start();
     }
     for(int q=0;q<4;q++){
