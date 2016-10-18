@@ -66,7 +66,7 @@ public class Calculator extends Thread{
         Complex c=new Complex(xi,yi);
         Complex op=new Complex(1,1);
         int iteration=0;
-        for(int i=0;i<255*255*255&&(z.getReal()<=2.0E+307||z.getImaginary()<=2.0E+307);i++){
+        for(int i=0;i<255&&(z.getReal()<=2.0E+307||z.getImaginary()<=2.0E+307);i++){
           if(op.getReal()==z.getReal()&&op.getImaginary()==z.getImaginary()){
             iteration=255*255*255-2;
           }

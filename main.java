@@ -57,7 +57,7 @@ public class main extends Canvas{
               for(int o=0;o<255;o++){
                 for(int l=0;l<255;l++){
                   if(p*255*255+p*255+l==it){
-                    g.setColor(new Color(q,p,l));
+                    g.setColor(new Color(q,p,l);
                   }
                 }
               }
