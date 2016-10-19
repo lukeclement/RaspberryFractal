@@ -32,7 +32,7 @@ public class Calculator extends Thread{
       break;
     }
     //finding madelbrots
-    double q=1;
+    double q=0.5;
     for(int x=offsetX;x<offsetX+(width/2);x++){
       for(int y=offsetY;y<offsetY+(height/2);y++){
         double xii=(double)x;
@@ -72,7 +72,7 @@ public class Calculator extends Thread{
           }
           op.setReal(z.getReal());
           op.setImaginary(z.getImaginary());
-          z=(z.square()).plus(c);
+          z=(z.square().times(z)).plus(c);
 
           ++iteration;
 
