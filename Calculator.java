@@ -32,7 +32,7 @@ public class Calculator extends Thread{
       break;
     }
     //finding madelbrots
-    double q=2;
+    double q=0.5;
     for(int x=offsetX;x<offsetX+(width/2);x++){
       for(int y=offsetY;y<offsetY+(height/2);y++){
         double xii=(double)x;
