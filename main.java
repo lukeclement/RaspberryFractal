@@ -17,8 +17,8 @@ public class main extends Canvas{
     xid=Integer.parseInt(args[0]);
     yid=Integer.parseInt(args[1]);
     frame.add(index);
-    //frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-    //frame.setUndecorated(true);
+    frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+    frame.setUndecorated(true);
     int it=24563;
     int p=it/(255*255);
     int o=(it/255)-p*255;
