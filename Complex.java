@@ -28,7 +28,7 @@ class Complex{
         return new Complex(realPart,imaginaryPart);
     }
     public Complex times(Complex c){
-      double realPart=r*c.getReal()-r*c.getImaginary();
+      double realPart=r*c.getReal()-i*c.getImaginary();
       double imaginaryPart=c.getReal()*i+r*c.getImaginary();
       return new Complex(realPart,imaginaryPart);
     }
