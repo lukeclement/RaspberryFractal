@@ -72,7 +72,7 @@ public class Calculator extends Thread{
           //}
           op.setReal(z.getReal());
           op.setImaginary(z.getImaginary());
-          z=(z.square().times(z)).plus(c);
+          z=(z.square()).plus(c);
 
           ++iteration;
 
