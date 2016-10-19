@@ -14,8 +14,8 @@ public class main extends Canvas{
     JFrame frame = new JFrame();
 		frame.setSize(Width, Height);
     main index = new main();
-    xid=Integer.parseInt(args[0]);
-    yid=Integer.parseInt(args[1]);
+    xid=Integer.parseInt(args[1]);
+    yid=Integer.parseInt(args[0]);
     frame.add(index);
     frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
     frame.setUndecorated(true);
