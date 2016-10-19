@@ -61,7 +61,7 @@ public class main extends Canvas{
             int p=it/(255*255);
             int o=(it/255)-p*255;
             int l=it-o*255-p*255*255;
-            g.setColor(new Color(255-p,255-o,255-l));
+            g.setColor(new Color(l/3,l/2,l));
             //g.setColor(new Color(255,255,255));
             g.drawLine(i,j,i,j);
           }
